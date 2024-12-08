@@ -2,19 +2,20 @@ from flask import Flask, render_template, request
 import random
 app = Flask(__name__)
 
-# Generate a random number when server starts
-random_number = random.randint(1, 100)
 
 
 @app.route('/', methods=['GET'])
 def show_game():
+    # Generate a random number when server starts
+    global random_number
+    random_number = random.randint(1, 100)
     # This route shows the game page
     return render_template('game.html')
 
 
 @app.route('/guess', methods=['POST'])
 def check_guess():
-    global random_number
+
     # This route handles the player's guess
     guess = int(request.form.get('guess', 0))
 
