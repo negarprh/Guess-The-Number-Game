@@ -14,6 +14,7 @@ def show_game():
 
 @app.route('/guess', methods=['POST'])
 def check_guess():
+    global random_number
     # This route handles the player's guess
     guess = int(request.form.get('guess', 0))
 
