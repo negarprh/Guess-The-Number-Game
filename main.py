@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session
 import random
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates', static_folder='static')
 app.secret_key = "supersecretkey"
 
 @app.route('/', methods=['GET'])
