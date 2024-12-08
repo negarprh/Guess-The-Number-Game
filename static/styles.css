@@ -93,6 +93,25 @@ button:hover {
     animation: fadeIn 0.8s ease-in-out;
 }
 
+#play-again {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ffde59; /* Gold to match the theme */
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#play-again:hover {
+    background-color: #ffdf00;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
 
 #foot {
     margin-top: auto;

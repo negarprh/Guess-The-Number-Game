@@ -16,10 +16,27 @@
     </div>
     {% endif %}
 
+    {% if message and "Correct!" not in message %}
     <form action="{{ url_for('check_guess') }}" method="post">
         <input type="number" name="guess" required>
         <button type="submit">Submit Guess</button>
     </form>
+    {% elif message and "Correct!" in message %}
+
+    <!-- Play Again Button -->
+    <form action="{{ url_for('show_game') }}" method="get">
+        <button id="play-again" type="submit">Play Again</button>
+    </form>
+    {% else %}
+
+    <!-- Initial form when no message exists -->
+    <form action="{{ url_for('check_guess') }}" method="post">
+        <input type="number" name="guess" required>
+        <button type="submit">Submit Guess</button>
+    </form>
+    {% endif %}
+
+
 
 <span id="foot"><a href="https://www.linkedin.com/in/negar-pirasteh/" target="_blank">Coded by Negar Pirasteh </a></span>
 </body>

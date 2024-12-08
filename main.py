@@ -23,6 +23,7 @@ def check_guess():
     if guess == random_number:
         message = "Correct! You win! 🎉 A new number has been generated!"
         session['random_number'] = random.randint(1, 100)
+
     elif guess < random_number:
         message = "Too low! Try again! ⬆️"
     else:
