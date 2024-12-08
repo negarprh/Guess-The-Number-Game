@@ -1,0 +1,94 @@
+/* Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffd700; /* Gold */
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.message {
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    color: #ffd700;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Input */
+input[type="number"] {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Button */
+button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ffde59;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ffdf00;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}

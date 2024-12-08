@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
-
+import random
 app = Flask(__name__)
 
 # Generate a random number when server starts
-secret_number = 42
+random_number = random.randint(1, 100)
 
 
 @app.route('/', methods=['GET'])
@@ -17,9 +17,9 @@ def check_guess():
     # This route handles the player's guess
     guess = int(request.form.get('guess', 0))
 
-    if guess == secret_number:
+    if guess == random_number:
         message = "Correct! You win! 🎉"
-    elif guess < secret_number:
+    elif guess < random_number:
         message = "Too low! Try again! ⬆️"
     else:
         message = "Too high! Try again! ⬇️"
