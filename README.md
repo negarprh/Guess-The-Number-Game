@@ -1,4 +1,4 @@
-# 🎮 Guess-The-Number-Game
+# 🎮 Guess The Number Game
 
 **A fun, Flask-based game where you guess a number between 1 and 100!**  
 Live Demo 👉 [Play Now](https://guess-the-number-game-krez.onrender.com/)
